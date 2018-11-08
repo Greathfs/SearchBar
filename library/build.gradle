@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+/** 以下开始是将Android Library上传到jcenter的相关配置**/
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 28
@@ -40,7 +42,7 @@ publish {
     artifactId = 'SearchBar'        // 依赖名compile 'x:y:z'中的项目名y
     publishVersion = '1.0.0'          // 依赖名compile 'x:y:z'中的版本号z
     desc = 'a Searchview for Android'            // 对该开源组件的说明
-    website = 'https://github.com/Carson-Ho/Search_Layout'  // VCS地址，即填写项目上传的Github地址
+    website = 'https://github.com/Greathfs/SearchBar'  // VCS地址，即填写项目上传的Github地址
 }
 tasks.withType(Javadoc) {//防止编码问题
     options.addStringOption('Xdoclint:none', '-quiet')
